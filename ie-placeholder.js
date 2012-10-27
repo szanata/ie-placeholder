@@ -4,7 +4,8 @@ $(function (){
     function resetPlaceholder() {
       if ($(this).val() === '') {
         $(this).val($(this).attr('placeholder'))
-          .attr('data-placeholder', true);
+          .attr('data-placeholder', true)
+          .addClass('ie-placeholder');
         if ($(this).is(':password')) {
           var field = $('<input />');
           $.each(this.attributes, function (i, attr) {
@@ -23,11 +24,15 @@ $(function (){
     }
 
     $('[placeholder]').each(function () {
+      //ie user refresh don't reset input values workaround
+      if ($(this).attr('placeholder') !== '' && $(this).attr('placeholder') === $(this).val()){
+        $(this).val('');
+      }
       resetPlaceholder.call(this);
     });
     $(document).on('focus', '[placeholder]', function () {
       if ($(this).attr('data-placeholder')) {
-        $(this).val('').removeAttr('data-placeholder');
+        $(this).val('').removeAttr('data-placeholder').removeClass('ie-placeholder');
       }
     }).on('blur', '[placeholder]', function () { resetPlaceholder.call(this); });
     $(document).on('focus', '[data-input-password]', function () {
@@ -41,4 +46,5 @@ $(function (){
       $(this).replaceWith(field);
       field.trigger('focus');
     });
+  }
 });
