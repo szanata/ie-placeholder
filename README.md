@@ -1,6 +1,13 @@
 ie-placeholder
 ==============
 
+# changeload
+- **1.1**
+  - excluding support to ie 10, this browser have native placeholder implementation
+  
+- **1**
+  - initial release
+
 # Jquery IE Placeholder Plugin
 
 This plugin emulates the placeholder behavior for IE browsers!

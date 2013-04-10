@@ -1,6 +1,6 @@
 ﻿//IE placeholder;
 $(function (){
-  if (/MSIE/g.test(navigator.userAgent)) {
+  if (/MSIE 9|MSIE 8|MSIE 7|MSIE 6/g.test(navigator.userAgent)) {
     function resetPlaceholder() {
       if ($(this).val() === '') {
         $(this).val($(this).attr('placeholder'))
