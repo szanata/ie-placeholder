@@ -3,6 +3,7 @@
   $.fn.ieplaceholder = function() {
     return this.each(function() {
       if (/MSIE 9|MSIE 8|MSIE 7|MSIE 6/g.test(navigator.userAgent)) {
+        var resetPlaceholder;
         resetPlaceholder = function() {
           if ($(this).val() === '') {
             $(this).val($(this).attr('placeholder'))
