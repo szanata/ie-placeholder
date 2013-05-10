@@ -9,6 +9,9 @@ This plugin works with the original attr placeholder for input or textareas, you
 Now when you open your page on IE the placeholder thing will look like any HTML5 browser.
 You can style your placeholder to look like other browsers by adding styling code to the .ie-placeholder class.
 
+Initilize by calling:
+    $(document).ieplaceholder();
+
 ### changelog
 
 - **1.2**
