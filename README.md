@@ -11,9 +11,11 @@ You can style your placeholder to look like other browsers by adding styling cod
 
 ### changelog
 
-- **1.1** 
+- **1.2**
+  - Updated so it can be a method and called whenever needed, e.g. when new content is loaded via AJAX
+
+- **1.1**
   - excluding support to ie 10, this browser have native placeholder implementation
-  
 
 - **1**
   - initial release
